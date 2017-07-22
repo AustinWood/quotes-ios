@@ -21,9 +21,7 @@ struct Service {
             
             switch(response.result) {
             case let .success(value):
-                print(value)
                 let json = JSON(value:value)
-                
                 if let user = User(json: json) {
                     completion(Result.success(user))
                 } else{

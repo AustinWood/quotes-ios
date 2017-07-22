@@ -15,26 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        createNewUserOld()
         createNewUser()
-    }
-    
-    func createNewUserOld() {
-        print(">>> createNewUserOld")
-        
-        let urlEndpoint = "https://quotes-ios.herokuapp.com/v1/users"
-        
-        let parameters: Parameters = ["user": [
-            "phone_number": 1324567897,
-            "name": "Greg Bobby",
-            "password": "password"
-        ]]
-        
-        Alamofire.request(urlEndpoint, method: .post, parameters: parameters).responseJSON { response in
-            if let json = response.result.value {
-                print("JSON: \(json)")
-            }
-        }
     }
     
     func createNewUser() {

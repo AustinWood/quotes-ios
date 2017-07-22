@@ -59,17 +59,14 @@ enum Router: URLRequestConvertible {
         default:
             break
         }
-        print(paramDict)
         return paramDict
     }
     
     var method: HTTPMethod {
         switch self {
         case .createUser:
-            print("post")
             return .post
         default:
-            print("get")
             return .get
         }
     }
@@ -89,8 +86,6 @@ enum Router: URLRequestConvertible {
         
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = headers
-        
-        print(urlRequest)
         
         return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
     }
