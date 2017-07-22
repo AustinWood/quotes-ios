@@ -22,5 +22,6 @@ struct UserConstants {
     static let phoneNumber = "phone_number"
     static let name = "name"
     static let password = "password"
+    static let imageUrl = "image_url"
     
 }

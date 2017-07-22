@@ -30,7 +30,7 @@ struct Service {
                     print("error parsing user JSON")
                 }
             case let .failure(error):
-                print("failure")
+                print(error)
             }
         })
     }

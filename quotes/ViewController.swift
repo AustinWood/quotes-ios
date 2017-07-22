@@ -10,19 +10,22 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-
+    
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        createNewUserOld()
         createNewUser()
     }
     
-    func createNewUser() {
-        print(">>> createNewUser")
+    func createNewUserOld() {
+        print(">>> createNewUserOld")
         
         let urlEndpoint = "https://quotes-ios.herokuapp.com/v1/users"
         
         let parameters: Parameters = ["user": [
-            "phone_number": 1324567892,
+            "phone_number": 1324567897,
             "name": "Greg Bobby",
             "password": "password"
         ]]
@@ -32,5 +35,21 @@ class ViewController: UIViewController {
                 print("JSON: \(json)")
             }
         }
+    }
+    
+    func createNewUser() {
+        print(">>> createNewUser")
+        
+        Service.createUser(phone_number: 1234567896, name: "Keith Wood", password: "password", image_url: nil,
+                           completion: { [weak self] (result: Result<User>) in
+                            
+                            switch(result) {
+                            case let .success(user):
+                                self?.user = user
+                                print(user)
+                            case let .failure(error):
+                                print(error.localizedDescription)
+                            }
+        })
     }
 }

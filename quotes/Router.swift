@@ -44,27 +44,32 @@ enum Router: URLRequestConvertible {
     }
     
     var parameters: [String: Any] {
-        var paramDict : [String: Any] = [:]
+        var paramDict: [String: Any] = [:]
         
         switch self {
         case let .createUser(phone_number: phone_number, name: name, password: password, image_url: image_url):
-            paramDict["phone_number"] = phone_number
-            paramDict["name"] = name
-            paramDict["password"] = password
+            var userDict: [String: Any] = [:]
+            userDict["phone_number"] = phone_number
+            userDict["name"] = name
+            userDict["password"] = password
             if let image_url = image_url {
-                paramDict["image_url"] =  image_url
+                userDict["image_url"] =  image_url
             }
+            paramDict["user"] = userDict
         default:
             break
         }
+        print(paramDict)
         return paramDict
     }
     
     var method: HTTPMethod {
         switch self {
         case .createUser:
+            print("post")
             return .post
         default:
+            print("get")
             return .get
         }
     }
@@ -84,6 +89,8 @@ enum Router: URLRequestConvertible {
         
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = headers
+        
+        print(urlRequest)
         
         return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
     }
