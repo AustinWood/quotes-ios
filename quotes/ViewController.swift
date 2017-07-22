@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        createNewUser()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func createNewUser() {
+        print(">>> createNewUser")
+        // let urlEndpoint = "https://quotes-ios.herokuapp.com/"
     }
-
-
 }
-
