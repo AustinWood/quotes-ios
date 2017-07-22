@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     func createNewUser() {
         print(">>> createNewUser")
         
-        Service.createUser(phone_number: "1234567896", name: "Keith Wood", password: "password", image_url: nil,
+        Service.createUser(phone_number: "3234567896", name: "Keith Wood", password: "password", image_url: nil,
                            completion: { [weak self] (result: Result<User>) in
                             
                             switch(result) {

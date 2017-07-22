@@ -13,12 +13,12 @@ import SwiftyJSON
 class User: Failable {
     
     var id: Int
-    var phoneNumber: Int
+    var phoneNumber: String
     var name: String
     var imageUrl: URL?
     var image: UIImage?
     
-    init(id: Int, phoneNumber: Int, name: String, imageUrl: URL?) {
+    init(id: Int, phoneNumber: String, name: String, imageUrl: URL?) {
         self.id = id
         self.phoneNumber = phoneNumber
         self.name = name
@@ -30,7 +30,7 @@ class User: Failable {
         guard
             
         let id = json[UserConstants.id].int,
-        let phoneNumber = json[UserConstants.phoneNumber].int,
+        let phoneNumber = json[UserConstants.phoneNumber].string,
         let name = json[UserConstants.name].string
         
         else {
