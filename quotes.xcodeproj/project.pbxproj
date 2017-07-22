@@ -13,6 +13,7 @@
 		42BD1CC11F23EEFA00CF7184 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */; };
 		42BD1CC41F23EF8300CF7184 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC31F23EF8300CF7184 /* User.swift */; };
 		42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC51F23EFFF00CF7184 /* Protocols.swift */; };
+		42BD1CC91F23F80B00CF7184 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */; };
 		42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634C1F23C674009F2FE6 /* AppDelegate.swift */; };
 		42C6634F1F23C674009F2FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634E1F23C674009F2FE6 /* ViewController.swift */; };
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/quotes-epjufhihfupstvcaehdkdpcikuro/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		42BD1CC31F23EF8300CF7184 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42BD1CC51F23EFFF00CF7184 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
+		42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		42C663491F23C674009F2FE6 /* quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C6634C1F23C674009F2FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C6634E1F23C674009F2FE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				42C6634E1F23C674009F2FE6 /* ViewController.swift */,
+				42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -109,12 +112,12 @@
 		42C6634B1F23C674009F2FE6 /* quotes */ = {
 			isa = PBXGroup;
 			children = (
-				42C6634C1F23C674009F2FE6 /* AppDelegate.swift */,
-				42BD1CC51F23EFFF00CF7184 /* Protocols.swift */,
 				42BD1CC71F23F78700CF7184 /* Controllers */,
 				42BD1CC21F23EF7800CF7184 /* Models */,
 				42BD1CB91F23D2AB00CF7184 /* Networking */,
 				42C663501F23C674009F2FE6 /* Main.storyboard */,
+				42BD1CC51F23EFFF00CF7184 /* Protocols.swift */,
+				42C6634C1F23C674009F2FE6 /* AppDelegate.swift */,
 				42C663531F23C674009F2FE6 /* Assets.xcassets */,
 				42C663551F23C674009F2FE6 /* LaunchScreen.storyboard */,
 				42C663581F23C674009F2FE6 /* Info.plist */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42BD1CC91F23F80B00CF7184 /* SignUpVC.swift in Sources */,
 				42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
