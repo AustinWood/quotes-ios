@@ -10,21 +10,49 @@
 // TODO
 //
 // number pad for phone number
-// display number as phone number
+// validate and pretty-format phone number
 // hide password
-// move fields up when keyboard appears
-//
+// move fields up when keyboard appears (scrollview?)
+// autocaps on name
 //
 //
 ///////////////////////////////
 
 
 import UIKit
+import Alamofire
 
 class SignUpVC: UIViewController {
-
+    
+    var user: User?
+    
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func signUpPressed(_ sender: Any) {
+        
+        guard
+        let phoneNumber = phoneNumberTextField.text,
+        let name = nameTextField.text,
+        let password = passwordTextField.text
+        else { return }
+        
+        Service.createUser(phone_number: phoneNumber, name: name, password: password, image_url: nil,
+                           completion: { [weak self] (result: Result<User>) in
+                            
+                            switch(result) {
+                            case let .success(user):
+                                self?.user = user
+                                print(user)
+                            case let .failure(error):
+                                print(error.localizedDescription)
+                            }
+        })
     }
     
 }

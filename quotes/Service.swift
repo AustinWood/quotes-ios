@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct Service {
     
-    static func createUser(phone_number: Int, name: String, password: String, image_url: URL?,
+    static func createUser(phone_number: String, name: String, password: String, image_url: URL?,
                            completion: @escaping (Result<User>) -> Void) {
         
         Alamofire.request(

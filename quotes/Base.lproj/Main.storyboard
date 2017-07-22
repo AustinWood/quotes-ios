@@ -117,6 +117,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2X-s0-Idp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -134,6 +137,11 @@
                             <constraint firstItem="cAu-JB-clv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="t8e-aG-yr5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="aAv-ym-isl" id="oHp-cI-atC"/>
+                        <outlet property="passwordTextField" destination="9M1-of-bRw" id="gvb-Fm-2rG"/>
+                        <outlet property="phoneNumberTextField" destination="uvP-ov-IFf" id="yCX-7t-L96"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

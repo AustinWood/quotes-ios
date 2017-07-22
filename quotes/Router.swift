@@ -11,8 +11,8 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     
-    case createUser(phone_number: Int, name: String, password: String, image_url: URL?)
-    case loginUser(phone_number: Int, password: String)
+    case createUser(phone_number: String, name: String, password: String, image_url: URL?)
+    case loginUser(phone_number: String, password: String)
     
     var path: String {
         switch self {
