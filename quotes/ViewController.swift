@@ -16,9 +16,8 @@ class ViewController: UIViewController {
         createNewUser()
     }
     
-    func createNewUser() {
-        print(">>> createNewUser")
-        // let urlEndpoint = "https://quotes-ios.herokuapp.com/"
+    func getRequest() {
+        print(">>> getRequest")
         
         Alamofire.request("https://austinbio.herokuapp.com/api/heart_rates").responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
@@ -33,5 +32,19 @@ class ViewController: UIViewController {
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
+    }
+    
+    func createNewUser() {
+        print(">>> createNewUser")
+        
+        let urlEndpoint = "https://quotes-ios.herokuapp.com/v1/users"
+        
+        let parameters: Parameters = ["user": [
+            "phone_number": 1324567890,
+            "name": "Bob Bobby",
+            "password": "password"
+        ]]
+        
+        Alamofire.request(urlEndpoint, method: .post, parameters: parameters)
     }
 }
