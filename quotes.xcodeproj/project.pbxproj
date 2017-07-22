@@ -15,7 +15,6 @@
 		42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC51F23EFFF00CF7184 /* Protocols.swift */; };
 		42BD1CC91F23F80B00CF7184 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */; };
 		42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634C1F23C674009F2FE6 /* AppDelegate.swift */; };
-		42C6634F1F23C674009F2FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634E1F23C674009F2FE6 /* ViewController.swift */; };
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
 		42C663541F23C674009F2FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C663531F23C674009F2FE6 /* Assets.xcassets */; };
 		42C663571F23C674009F2FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663551F23C674009F2FE6 /* LaunchScreen.storyboard */; };
@@ -34,7 +33,6 @@
 		42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		42C663491F23C674009F2FE6 /* quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C6634C1F23C674009F2FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42C6634E1F23C674009F2FE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42C663511F23C674009F2FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42C663531F23C674009F2FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C663561F23C674009F2FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		42BD1CC71F23F78700CF7184 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				42C6634E1F23C674009F2FE6 /* ViewController.swift */,
 				42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */,
 			);
 			name = Controllers;
@@ -263,7 +260,6 @@
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
 				42BD1CC41F23EF8300CF7184 /* User.swift in Sources */,
-				42C6634F1F23C674009F2FE6 /* ViewController.swift in Sources */,
 				42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */,
 				42BD1CBD1F23E82B00CF7184 /* Constants.swift in Sources */,
 			);

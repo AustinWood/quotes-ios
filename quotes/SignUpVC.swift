@@ -35,7 +35,6 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signUpPressed(_ sender: Any) {
-        
         guard
         let phoneNumber = phoneNumberTextField.text,
         let name = nameTextField.text,
@@ -48,7 +47,6 @@ class SignUpVC: UIViewController {
                             switch(result) {
                             case let .success(user):
                                 self?.user = user
-                                print(user)
                             case let .failure(error):
                                 print(error.localizedDescription)
                             }
