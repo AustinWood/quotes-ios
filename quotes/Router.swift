@@ -16,10 +16,10 @@ enum Router: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .loginUser:
-            return NetworkingConstants.login
         case .createUser:
             return NetworkingConstants.users
+        case .loginUser:
+            return NetworkingConstants.login
         }
     }
     
@@ -34,8 +34,9 @@ enum Router: URLRequestConvertible {
             if let image_url = image_url {
                 bodyDict["image_url"] =  image_url
             }
-        default:
-            print("no action")
+        case let .loginUser(phone_number: phone_number, password: password):
+            bodyDict["phone_number"] = phone_number
+            bodyDict["password"] = password
         }
         
         let data = try! JSONSerialization.data(withJSONObject: bodyDict, options: [])
@@ -56,18 +57,21 @@ enum Router: URLRequestConvertible {
                 userDict["image_url"] =  image_url
             }
             paramDict["user"] = userDict
-        default:
-            break
+        case let .loginUser(phone_number: phone_number, password: password):
+            var userDict: [String: Any] = [:]
+            userDict["phone_number"] = phone_number
+            userDict["password"] = password
+            paramDict["user"] = userDict
         }
         return paramDict
     }
     
     var method: HTTPMethod {
         switch self {
-        case .createUser:
+        case .createUser, .loginUser:
             return .post
-        default:
-            return .get
+        // default:
+        //     return .get
         }
     }
     

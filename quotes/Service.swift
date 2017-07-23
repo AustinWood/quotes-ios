@@ -33,4 +33,25 @@ struct Service {
         })
     }
     
+    static func loginUser(phone_number: String, password: String,
+                           completion: @escaping (Result<User>) -> Void) {
+        
+        Alamofire.request(
+            Router.loginUser(phone_number: phone_number, password: password)
+            ).responseJSON(completionHandler: { response in
+                
+                switch(response.result) {
+                case let .success(value):
+                    let json = JSON(value:value)
+                    if let user = User(json: json) {
+                        completion(Result.success(user))
+                    } else{
+                        print("error parsing user JSON")
+                    }
+                case let .failure(error):
+                    print(error)
+                }
+            })
+    }
+    
 }

@@ -12,7 +12,7 @@ struct NetworkingConstants {
     
     static let baseURL = "https://quotes-ios.herokuapp.com/v1"
     static let users = "users"
-    static let login = "sessions"
+    static let login = "session"
     
 }
 
