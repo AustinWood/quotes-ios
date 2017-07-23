@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class QuotesVC: UIViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getQuotes()
     }
     
+    func getQuotes() {
+        let url = "https://quotes-ios.herokuapp.com/v1/quotes"
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON(completionHandler: { response in
+                
+                switch(response.result) {
+                case let .success(value):
+                    let json = JSON(value:value)
+                    print(json)
+                case let .failure(error):
+                    print(error)
+                }
+            })
+    }
     
 }
