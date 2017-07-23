@@ -22,7 +22,7 @@
 import UIKit
 import Alamofire
 
-class SignUpVC: UIViewController {
+class AuthVC: UIViewController {
     
     var user: User?
     

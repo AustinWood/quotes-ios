@@ -13,7 +13,7 @@
 		42BD1CC11F23EEFA00CF7184 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */; };
 		42BD1CC41F23EF8300CF7184 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC31F23EF8300CF7184 /* User.swift */; };
 		42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC51F23EFFF00CF7184 /* Protocols.swift */; };
-		42BD1CC91F23F80B00CF7184 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */; };
+		42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC81F23F80B00CF7184 /* AuthVC.swift */; };
 		42BD1CCB1F24028900CF7184 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42BD1CCA1F24028900CF7184 /* todo.txt */; };
 		42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634C1F23C674009F2FE6 /* AppDelegate.swift */; };
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 		42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/quotes-epjufhihfupstvcaehdkdpcikuro/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		42BD1CC31F23EF8300CF7184 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		42BD1CC51F23EFFF00CF7184 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
-		42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		42BD1CC81F23F80B00CF7184 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		42BD1CCA1F24028900CF7184 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		42C663491F23C674009F2FE6 /* quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C6634C1F23C674009F2FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		42BD1CC71F23F78700CF7184 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				42BD1CC81F23F80B00CF7184 /* SignUpVC.swift */,
+				42BD1CC81F23F80B00CF7184 /* AuthVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42BD1CC91F23F80B00CF7184 /* SignUpVC.swift in Sources */,
+				42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */,
 				42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
