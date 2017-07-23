@@ -34,7 +34,11 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func signUpPressed(_ sender: Any) {
+    @IBAction func authButtonPressed(_ sender: Any) {
+        logIn()
+    }
+    
+    func signUp() {
         guard
         let phoneNumber = phoneNumberTextField.text,
         let name = nameTextField.text,
@@ -42,6 +46,24 @@ class SignUpVC: UIViewController {
         else { return }
         
         Service.createUser(phone_number: phoneNumber, name: name, password: password, image_url: nil,
+                           completion: { [weak self] (result: Result<User>) in
+                            
+                            switch(result) {
+                            case let .success(user):
+                                self?.user = user
+                            case let .failure(error):
+                                print(error.localizedDescription)
+                            }
+        })
+    }
+    
+    func logIn() {
+        guard
+            let phoneNumber = phoneNumberTextField.text,
+            let password = passwordTextField.text
+            else { return }
+        
+        Service.loginUser(phone_number: phoneNumber, password: password,
                            completion: { [weak self] (result: Result<User>) in
                             
                             switch(result) {
