@@ -76,7 +76,6 @@ enum Router: URLRequestConvertible {
         }
         
         return paramDict
-        
     }
     
     var method: HTTPMethod {

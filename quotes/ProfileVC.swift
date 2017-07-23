@@ -21,21 +21,24 @@ class ProfileVC: UIViewController {
     }
     
     func logOut() {
-        
-        Service.logoutUser(session_token: GLOBAL_SESSION_TOKEN!, completion: { [weak self] (result: Result<String>) in
+        print("ProfileVC.logOut()")
+        Service.logoutUser(session_token: GLOBAL_SESSION_TOKEN!, completion: { [weak self] (result: Result<Bool>) in
             
+            print("outside switch")
             switch(result) {
             case let .success(response):
                 print(">>> ProfileVC.logOut()")
                 print(response)
                 self?.segueToAuth()
             case let .failure(error):
+                print("fail")
                 print(error.localizedDescription)
             }
         })
     }
     
     func segueToAuth() {
+        print("segueToAuth()")
         self.performSegue(withIdentifier: "goToAuth", sender: self)
     }
 }
