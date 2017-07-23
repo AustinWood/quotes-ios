@@ -53,12 +53,12 @@ class AuthVC: UIViewController {
     @IBAction func toggleAuthTypePressed(_ sender: Any) {
         newAccount = !newAccount
         if newAccount {
-            authButton.setTitle("Sign up", for: .normal)
-            toggleAuthTypeButton.setTitle("Log in instead", for: .normal)
+            authButton.setTitleWithoutAnimation("Sign up")
+            toggleAuthTypeButton.setTitleWithoutAnimation("Log in instead")
             nameStackView.isHidden = false
         } else {
-            authButton.setTitle("Log in", for: .normal)
-            toggleAuthTypeButton.setTitle("Sign up instead", for: .normal)
+            authButton.setTitleWithoutAnimation("Log in")
+            toggleAuthTypeButton.setTitleWithoutAnimation("Sign up instead")
             nameStackView.isHidden = true
         }
     }
@@ -109,5 +109,15 @@ class AuthVC: UIViewController {
         SESSION_TOKEN = user?.sessionToken
         USER_ID = user?.id
         self.performSegue(withIdentifier: "goToProfile", sender: self)
+    }
+}
+
+
+extension UIButton {
+    func setTitleWithoutAnimation(_ title: String?) {
+        UIView.setAnimationsEnabled(false)
+        setTitle(title, for: .normal)
+        layoutIfNeeded()
+        UIView.setAnimationsEnabled(true)
     }
 }
