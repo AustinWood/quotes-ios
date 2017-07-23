@@ -31,9 +31,4 @@ struct UserConstants {
 
 struct QuoteConstants {
     
-    static let id = "id"
-    static let text = "text"
-    static let saidBy = "said_by"
-    static let heardBy = "heard_by"
-    
 }

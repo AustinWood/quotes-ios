@@ -12,39 +12,9 @@ import SwiftyJSON
 
 class QuotesVC: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getQuotes()
-        QuotesService.getAllQuotes()
+        print(QuotesService.getAllQuotes())
     }
-    
-    func getQuotes() {
-        
-        print(">>> get quotes\n")
-        
-        let url = "https://quotes-ios.herokuapp.com/v1/quotes"
-        
-        var paramDict: [String: Any] = [:]
-        var quoteDict: [String: Any] = [:]
-//        quoteDict["said_by"] = 19
-//        quoteDict["heard_by"] = 20
-        quoteDict["said_by_or_heard_by"] = 20
-        paramDict["quote"] = quoteDict
-        
-        Alamofire.request(url, method: .get, parameters: paramDict)
-            .responseJSON(completionHandler: { response in
-                
-                switch(response.result) {
-                case let .success(value):
-                    let json = JSON(value:value)
-                    print(json)
-                case let .failure(error):
-                    print(error)
-                }
-            })
-    }
-    
-    
     
 }

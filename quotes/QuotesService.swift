@@ -33,8 +33,8 @@ struct QuotesService {
                     completion: { [] (result: Result<[Quote]>) in
                         
                         switch(result) {
-                        case let .success(quote):
-                            print(quote)
+                        case let .success(fetchedQuotes):
+                            print(fetchedQuotes)
                         case let .failure(error):
                             print(error.localizedDescription)
                         }
@@ -42,23 +42,20 @@ struct QuotesService {
     }
     
     static func fetchQuotes(said_by: Int?, heard_by: Int?, said_by_or_heard_by: Int?,
-                          completion: @escaping (Result<[Quote]>) -> Void) {
+                          completion: @escaping (Result<[Quote]>) -> ()) {
         
-        Alamofire.request(
-            Router.fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by)
-            ).responseJSON(completionHandler: { response in
+        Alamofire
+            .request(Router.fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by))
+            .responseJSON(completionHandler: { response in
                 
                 switch(response.result) {
+                    
                 case let .success(value):
                     let json = JSON(value:value)
                     var quotes: [Quote] = []
                     
                     if let jsonQuotes = json.array {
                         for jsonQuote in jsonQuotes {
-                            
-                            print("\n\n>>> YO!")
-                            print(jsonQuote)
-                            
                             if let quote = Quote(json: jsonQuote) {
                                 quotes.append(quote)
                             } else {
@@ -67,7 +64,8 @@ struct QuotesService {
                         }
                     }
                     
-                    completion(Result.success(quotes))
+                    return completion(Result.success(quotes))
+                    
                 case let .failure(error):
                     print(error)
                 }

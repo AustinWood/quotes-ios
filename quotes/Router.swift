@@ -98,7 +98,7 @@ enum Router: URLRequestConvertible {
             }
             paramDict["quote"] = quoteDict
         }
-        print(paramDict)
+//        print(paramDict)
         return paramDict
     }
     
