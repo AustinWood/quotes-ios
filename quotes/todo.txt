@@ -1,4 +1,8 @@
-jaredmorgenstern.com/quotes
+RESUME WITH: successful logout should redirect
+
+THEN:
+
+prioritize features: jaredmorgenstern.com/quotes
 
 add seed data
 
