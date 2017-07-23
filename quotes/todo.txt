@@ -1,10 +1,7 @@
-RESUME WITH: successful logout should redirect
-
-THEN:
-
 prioritize features: jaredmorgenstern.com/quotes
 
 add seed data
+test how app responds with poor/no network connection
 
 app icon
 launch screen

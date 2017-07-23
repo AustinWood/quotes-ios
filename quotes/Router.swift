@@ -53,7 +53,6 @@ enum Router: URLRequestConvertible {
     var parameters: [String: Any] {
         var paramDict: [String: Any] = [:]
         
-        
         switch self {
         case let .createUser(phone_number: phone_number, name: name, password: password, image_url: image_url):
             var userDict: [String: Any] = [:]
