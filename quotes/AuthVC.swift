@@ -73,6 +73,7 @@ class AuthVC: UIViewController {
                             switch(result) {
                             case let .success(user):
                                 self?.user = user
+                                self?.segueToProfile()
                             case let .failure(error):
                                 print(error.localizedDescription)
                             }
@@ -91,10 +92,14 @@ class AuthVC: UIViewController {
                             switch(result) {
                             case let .success(user):
                                 self?.user = user
+                                self?.segueToProfile()
                             case let .failure(error):
                                 print(error.localizedDescription)
                             }
         })
     }
     
+    func segueToProfile() {
+        self.performSegue(withIdentifier: "goToProfile", sender: self)
+    }
 }
