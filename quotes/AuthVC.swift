@@ -43,8 +43,7 @@ class AuthVC: UIViewController {
     }
     
     @IBAction func authButtonPressed(_ sender: Any) {
-        logIn()
-//        segueToProfile()
+        newAccount ? signUp() : logIn()
     }
     
     @IBAction func toggleAuthTypePressed(_ sender: Any) {

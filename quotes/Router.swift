@@ -54,7 +54,6 @@ enum Router: URLRequestConvertible {
         
         switch self {
         case let .createUser(phone_number: phone_number, name: name, password: password, image_url: image_url):
-            var userDict: [String: Any] = [:]
             userDict["phone_number"] = phone_number
             userDict["name"] = name
             userDict["password"] = password
