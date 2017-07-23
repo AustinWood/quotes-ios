@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
-                                <rect key="frame" x="76" y="183" width="223" height="301"/>
+                                <rect key="frame" x="76" y="150" width="223" height="367"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-Oc-USi">
                                         <rect key="frame" x="0.0" y="0.0" width="223" height="219"/>
@@ -121,6 +121,16 @@
                                             <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agY-48-qgn"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-if-Lac">
+                                        <rect key="frame" x="0.0" y="337" width="223" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Log in instead">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleAuthTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgI-Yb-zlI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6yD-Oc-USi" firstAttribute="leading" secondItem="cAu-JB-clv" secondAttribute="leading" id="G9S-ln-wxH"/>
@@ -138,9 +148,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authButton" destination="jyc-iy-LCf" id="NGl-Um-9Yh"/>
                         <outlet property="nameTextField" destination="aAv-ym-isl" id="oHp-cI-atC"/>
                         <outlet property="passwordTextField" destination="9M1-of-bRw" id="gvb-Fm-2rG"/>
                         <outlet property="phoneNumberTextField" destination="uvP-ov-IFf" id="yCX-7t-L96"/>
+                        <outlet property="toggleAuthTypeButton" destination="A3K-if-Lac" id="FZb-ZI-qvE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -25,6 +25,7 @@ import Alamofire
 class AuthVC: UIViewController {
     
     var user: User?
+    var newAccount = true
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -34,9 +35,27 @@ class AuthVC: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var authButton: UIButton!
+    
     @IBAction func authButtonPressed(_ sender: Any) {
         logIn()
     }
+    
+    @IBOutlet weak var toggleAuthTypeButton: UIButton!
+    
+    @IBAction func toggleAuthTypePressed(_ sender: Any) {
+        newAccount = !newAccount
+        if newAccount {
+            authButton.setTitle("Sign up", for: .normal)
+            toggleAuthTypeButton.setTitle("Log in instead", for: .normal)
+        } else {
+            authButton.setTitle("Log in", for: .normal)
+            toggleAuthTypeButton.setTitle("Sign up instead", for: .normal)
+        }
+    }
+    
+    //////////////////////////////////////////////
+    // MARK: - Auth actions
     
     func signUp() {
         guard
