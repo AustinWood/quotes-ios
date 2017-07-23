@@ -9,6 +9,8 @@
 ///////////////////////////////
 // TODO
 //
+// uncomment logIn() in authButtonPressed
+//
 // number pad for phone number
 // validate and pretty-format phone number
 // hide password

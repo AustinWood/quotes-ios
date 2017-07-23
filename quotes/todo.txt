@@ -1,4 +1,6 @@
 jaredmorgenstern.com/quotes
 
+add seed data
+
 app icon
 launch screen
