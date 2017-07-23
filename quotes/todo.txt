@@ -1,7 +1,14 @@
-prioritize features: jaredmorgenstern.com/quotes
+jaredmorgenstern.com/quotes
 
-add seed data
-test how app responds with poor/no network connection
+####################
+
+ADD QUOTE
+DESIGN
+SEED DATA
 
 app icon
 launch screen
+
+test how app responds with poor/no network connection
+
+SEARCH
