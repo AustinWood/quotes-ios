@@ -27,6 +27,7 @@ class QuotesVC: UIViewController {
         var paramDict: [String: Any] = [:]
         var quoteDict: [String: Any] = [:]
         quoteDict["said_by"] = 19
+        quoteDict["heard_by"] = 20
         paramDict["quote"] = quoteDict
         
         Alamofire.request(url, method: .get, parameters: paramDict)
