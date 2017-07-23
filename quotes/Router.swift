@@ -14,6 +14,7 @@ enum Router: URLRequestConvertible {
     case createUser(phone_number: String, name: String, password: String, image_url: URL?)
     case loginUser(phone_number: String, password: String)
     case logoutUser(session_token: String)
+    case fetchQuotes(said_by: Int?, heard_by: Int?, said_by_or_heard_by: Int?)
     
     var path: String {
         switch self {
@@ -23,6 +24,8 @@ enum Router: URLRequestConvertible {
             return NetworkingConstants.login
         case .logoutUser:
             return NetworkingConstants.logout
+        case .fetchQuotes:
+            return NetworkingConstants.quotes
         }
     }
     
@@ -43,6 +46,16 @@ enum Router: URLRequestConvertible {
             bodyDict["password"] = password
         case let .logoutUser(session_token: session_token):
             bodyDict["session_token"] = session_token
+        case let .fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by):
+            if let said_by = said_by {
+                bodyDict["said_by"] = said_by
+            }
+            if let heard_by = heard_by {
+                bodyDict["heard_by"] = heard_by
+            }
+            if let said_by_or_heard_by = said_by_or_heard_by {
+                bodyDict["said_by_or_heard_by"] = said_by_or_heard_by
+            }
         }
         
         let data = try! JSONSerialization.data(withJSONObject: bodyDict, options: [])
@@ -72,8 +85,20 @@ enum Router: URLRequestConvertible {
             var sessionDict: [String: Any] = [:]
             sessionDict["session_token"] = session_token
             paramDict["session"] = sessionDict
+        case let .fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by):
+            var quoteDict: [String: Any] = [:]
+            if let said_by = said_by {
+                quoteDict["said_by"] = said_by
+            }
+            if let heard_by = heard_by {
+                quoteDict["heard_by"] = heard_by
+            }
+            if let said_by_or_heard_by = said_by_or_heard_by {
+                quoteDict["said_by_or_heard_by"] = said_by_or_heard_by
+            }
+            paramDict["quote"] = quoteDict
         }
-        
+        print(paramDict)
         return paramDict
     }
     
@@ -83,6 +108,8 @@ enum Router: URLRequestConvertible {
             return .post
         case .logoutUser:
             return .delete
+        case .fetchQuotes:
+            return .get
         }
     }
     

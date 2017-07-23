@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct Service {
+struct UsersService {
     
     static func createUser(phone_number: String, name: String, password: String, image_url: URL?,
                            completion: @escaping (Result<User>) -> Void) {

@@ -31,14 +31,12 @@ class User: Failable {
         
         guard
             
-        let id = json[UserConstants.id].int,
-        let phoneNumber = json[UserConstants.phoneNumber].string,
-        let name = json[UserConstants.name].string,
-        let sessionToken = json[UserConstants.sessionToken].string
+            let id = json[UserConstants.id].int,
+            let phoneNumber = json[UserConstants.phoneNumber].string,
+            let name = json[UserConstants.name].string,
+            let sessionToken = json[UserConstants.sessionToken].string
         
-        else {
-            return nil
-        }
+            else { return nil }
         
         self.id = id
         self.phoneNumber = phoneNumber

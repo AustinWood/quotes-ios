@@ -14,6 +14,7 @@ struct NetworkingConstants {
     static let users = "users"
     static let login = "session"
     static let logout = "session"
+    static let quotes = "quotes"
     
 }
 
@@ -25,5 +26,14 @@ struct UserConstants {
     static let password = "password"
     static let imageUrl = "image_url"
     static let sessionToken = "session_token"
+    
+}
+
+struct QuoteConstants {
+    
+    static let id = "id"
+    static let text = "text"
+    static let saidBy = "said_by"
+    static let heardBy = "heard_by"
     
 }

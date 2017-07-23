@@ -15,7 +15,8 @@ class QuotesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getQuotes()
+//        getQuotes()
+        QuotesService.getAllQuotes()
     }
     
     func getQuotes() {
@@ -43,5 +44,7 @@ class QuotesVC: UIViewController {
                 }
             })
     }
+    
+    
     
 }

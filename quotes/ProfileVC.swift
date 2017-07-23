@@ -20,7 +20,7 @@ class ProfileVC: UIViewController {
     }
     
     func logOut() {
-        Service.logoutUser(session_token: GLOBAL_SESSION_TOKEN!, completion: {
+        UsersService.logoutUser(session_token: SESSION_TOKEN!, completion: {
             [weak self] (result: Result<Bool>) in
             switch(result) {
             case .success:

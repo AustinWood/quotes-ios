@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		4208607E1F242A08009E8AD1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208607D1F242A08009E8AD1 /* ProfileVC.swift */; };
 		4229489F1F251898007DBEAA /* QuotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4229489E1F251898007DBEAA /* QuotesVC.swift */; };
-		42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBA1F23D36000CF7184 /* Service.swift */; };
+		422948A11F2540E5007DBEAA /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422948A01F2540E5007DBEAA /* QuotesService.swift */; };
+		422948A31F254328007DBEAA /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422948A21F254328007DBEAA /* Quote.swift */; };
+		42BD1CBB1F23D36000CF7184 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBA1F23D36000CF7184 /* UsersService.swift */; };
 		42BD1CBD1F23E82B00CF7184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBC1F23E82B00CF7184 /* Constants.swift */; };
 		42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBE1F23E8DB00CF7184 /* Router.swift */; };
 		42BD1CC11F23EEFA00CF7184 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */; };
@@ -29,7 +31,9 @@
 		2F466A03869CC568B21CFA74 /* Pods-quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quotes/Pods-quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		4208607D1F242A08009E8AD1 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4229489E1F251898007DBEAA /* QuotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesVC.swift; sourceTree = "<group>"; };
-		42BD1CBA1F23D36000CF7184 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		422948A01F2540E5007DBEAA /* QuotesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesService.swift; sourceTree = "<group>"; };
+		422948A21F254328007DBEAA /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		42BD1CBA1F23D36000CF7184 /* UsersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		42BD1CBC1F23E82B00CF7184 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42BD1CBE1F23E8DB00CF7184 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		42BD1CC01F23EEFA00CF7184 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/quotes-epjufhihfupstvcaehdkdpcikuro/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -71,7 +75,8 @@
 		42BD1CB91F23D2AB00CF7184 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				42BD1CBA1F23D36000CF7184 /* Service.swift */,
+				42BD1CBA1F23D36000CF7184 /* UsersService.swift */,
+				422948A01F2540E5007DBEAA /* QuotesService.swift */,
 				42BD1CBC1F23E82B00CF7184 /* Constants.swift */,
 				42BD1CBE1F23E8DB00CF7184 /* Router.swift */,
 			);
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				42BD1CC31F23EF8300CF7184 /* User.swift */,
+				422948A21F254328007DBEAA /* Quote.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -265,15 +271,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422948A11F2540E5007DBEAA /* QuotesService.swift in Sources */,
 				42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */,
 				4229489F1F251898007DBEAA /* QuotesVC.swift in Sources */,
-				42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */,
+				42BD1CBB1F23D36000CF7184 /* UsersService.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
 				4208607E1F242A08009E8AD1 /* ProfileVC.swift in Sources */,
 				42BD1CC41F23EF8300CF7184 /* User.swift in Sources */,
 				42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */,
 				42BD1CBD1F23E82B00CF7184 /* Constants.swift in Sources */,
+				422948A31F254328007DBEAA /* Quote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

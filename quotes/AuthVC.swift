@@ -9,7 +9,9 @@
 ///////////////////////////////
 // TODO
 //
-// fix GLOBAL_SESSION_TOKEN
+// Hide auth switch statements by encapsulating methods in UsersService
+// fix SESSION_TOKEN
+// fix USER_ID
 //
 // number pad for phone number
 // validate and pretty-format phone number
@@ -20,7 +22,8 @@
 //
 ///////////////////////////////
 
-var GLOBAL_SESSION_TOKEN: String?
+var SESSION_TOKEN: String?
+var USER_ID: Int?
 
 import UIKit
 import Alamofire
@@ -70,7 +73,7 @@ class AuthVC: UIViewController {
         let password = passwordTextField.text
         else { return }
         
-        Service.createUser(phone_number: phoneNumber, name: name, password: password, image_url: nil,
+        UsersService.createUser(phone_number: phoneNumber, name: name, password: password, image_url: nil,
                            completion: { [weak self] (result: Result<User>) in
                             
                             switch(result) {
@@ -89,7 +92,7 @@ class AuthVC: UIViewController {
             let password = passwordTextField.text
             else { return }
         
-        Service.loginUser(phone_number: phoneNumber, password: password,
+        UsersService.loginUser(phone_number: phoneNumber, password: password,
                            completion: { [weak self] (result: Result<User>) in
                             
                             switch(result) {
@@ -103,7 +106,8 @@ class AuthVC: UIViewController {
     }
     
     func segueToProfile() {
-        GLOBAL_SESSION_TOKEN = user?.sessionToken
+        SESSION_TOKEN = user?.sessionToken
+        USER_ID = user?.id
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
 }
