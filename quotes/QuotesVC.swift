@@ -19,8 +19,17 @@ class QuotesVC: UIViewController {
     }
     
     func getQuotes() {
+        
+        print(">>> get quotes\n")
+        
         let url = "https://quotes-ios.herokuapp.com/v1/quotes"
-        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        
+        var paramDict: [String: Any] = [:]
+        var quoteDict: [String: Any] = [:]
+        quoteDict["said_by"] = 19
+        paramDict["quote"] = quoteDict
+        
+        Alamofire.request(url, method: .get, parameters: paramDict)
             .responseJSON(completionHandler: { response in
                 
                 switch(response.result) {
