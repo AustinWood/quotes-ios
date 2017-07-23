@@ -204,7 +204,7 @@
         <!--Profile-->
         <scene sceneID="OJC-Zh-aYf">
             <objects>
-                <viewController id="JGJ-6e-sqt" sceneMemberID="viewController">
+                <viewController id="JGJ-6e-sqt" customClass="ProfileVC" customModule="quotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YlU-pN-NhB"/>
                         <viewControllerLayoutGuide type="bottom" id="cfH-1n-kla"/>
@@ -212,10 +212,35 @@
                     <view key="view" contentMode="scaleToFill" id="f6K-Gk-pY2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU">
+                                <rect key="frame" x="76" y="310" width="223" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.24626806379999999" blue="0.32597264650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="BnD-mN-lRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0J-RW-v5l"/>
+                                    <action selector="logOutPressed:" destination="JGJ-6e-sqt" eventType="touchUpInside" id="dCp-DN-dZc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HCI-vW-KrU" firstAttribute="centerY" secondItem="f6K-Gk-pY2" secondAttribute="centerY" id="ayV-No-1RO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HCI-vW-KrU" secondAttribute="trailing" constant="60" id="ss7-VE-oYi"/>
+                            <constraint firstItem="HCI-vW-KrU" firstAttribute="leading" secondItem="f6K-Gk-pY2" secondAttribute="leadingMargin" constant="60" id="tBy-Ai-t8A"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="QDw-LW-iz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goToAuth" id="09P-BI-eJH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGg-k9-0iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
