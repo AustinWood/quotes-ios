@@ -17,12 +17,14 @@ class User: Failable {
     var name: String
     var imageUrl: URL?
     var image: UIImage?
+    var sessionToken: String?
     
-    init(id: Int, phoneNumber: String, name: String, imageUrl: URL?) {
+    init(id: Int, phoneNumber: String, name: String, imageUrl: URL?, sessionToken: String) {
         self.id = id
         self.phoneNumber = phoneNumber
         self.name = name
         self.imageUrl = imageUrl
+        self.sessionToken = sessionToken
     }
     
     required init?(json:JSON) {
@@ -31,7 +33,8 @@ class User: Failable {
             
         let id = json[UserConstants.id].int,
         let phoneNumber = json[UserConstants.phoneNumber].string,
-        let name = json[UserConstants.name].string
+        let name = json[UserConstants.name].string,
+        let sessionToken = json[UserConstants.sessionToken].string
         
         else {
             return nil
@@ -40,6 +43,7 @@ class User: Failable {
         self.id = id
         self.phoneNumber = phoneNumber
         self.name = name
+        self.sessionToken = sessionToken
         
         if let urlString = json[UserConstants.imageUrl].string {
             let url = URL(string: urlString)

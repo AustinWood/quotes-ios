@@ -13,6 +13,7 @@ enum Router: URLRequestConvertible {
     
     case createUser(phone_number: String, name: String, password: String, image_url: URL?)
     case loginUser(phone_number: String, password: String)
+    case logoutUser(id: Int)
     
     var path: String {
         switch self {
@@ -20,6 +21,8 @@ enum Router: URLRequestConvertible {
             return NetworkingConstants.users
         case .loginUser:
             return NetworkingConstants.login
+        case .logoutUser:
+            return NetworkingConstants.logout
         }
     }
     
@@ -37,6 +40,8 @@ enum Router: URLRequestConvertible {
         case let .loginUser(phone_number: phone_number, password: password):
             bodyDict["phone_number"] = phone_number
             bodyDict["password"] = password
+        case let .logoutUser(id: id):
+            bodyDict["user_id"] = id
         }
         
         let data = try! JSONSerialization.data(withJSONObject: bodyDict, options: [])
@@ -45,7 +50,7 @@ enum Router: URLRequestConvertible {
     }
     
     var parameters: [String: Any] {
-        var paramDict: [String: Any] = [:]
+        var userDict: [String: Any] = [:]
         
         switch self {
         case let .createUser(phone_number: phone_number, name: name, password: password, image_url: image_url):
@@ -56,13 +61,15 @@ enum Router: URLRequestConvertible {
             if let image_url = image_url {
                 userDict["image_url"] =  image_url
             }
-            paramDict["user"] = userDict
         case let .loginUser(phone_number: phone_number, password: password):
-            var userDict: [String: Any] = [:]
             userDict["phone_number"] = phone_number
             userDict["password"] = password
-            paramDict["user"] = userDict
+        case let .logoutUser(id: id):
+            userDict["id"] = id
         }
+        
+        var paramDict: [String: Any] = [:]
+        paramDict["user"] = userDict
         return paramDict
     }
     
@@ -70,8 +77,8 @@ enum Router: URLRequestConvertible {
         switch self {
         case .createUser, .loginUser:
             return .post
-        // default:
-        //     return .get
+        case .logoutUser:
+            return .delete
         }
     }
     

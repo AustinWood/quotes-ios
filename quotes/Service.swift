@@ -54,4 +54,19 @@ struct Service {
             })
     }
     
+    static func logoutUser(id: Int, completion: @escaping (Result<String>) -> Void) {
+        
+        Alamofire.request(Router.logoutUser(id: id))
+            .responseJSON(completionHandler: { response in
+                
+                switch(response.result) {
+                case let .success(value):
+                    print("logout successful!")
+                    print(value)
+                case let .failure(error):
+                    print(error)
+                }
+            })
+    }
+    
 }

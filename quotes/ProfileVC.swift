@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileVC: UIViewController {
 
@@ -15,7 +16,23 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
-        segueToAuth()
+//        segueToAuth()
+        logOut()
+    }
+    
+    func logOut() {
+        
+        Service.logoutUser(id: 1, completion: { [weak self] (result: Result<String>) in
+            
+            switch(result) {
+            case let .success(response):
+                print(">>> ProfileVC.logOut()")
+                print(response)
+                self?.segueToAuth()
+            case let .failure(error):
+                print(error.localizedDescription)
+            }
+        })
     }
     
     func segueToAuth() {
