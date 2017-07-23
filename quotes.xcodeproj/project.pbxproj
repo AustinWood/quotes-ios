@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4208607E1F242A08009E8AD1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208607D1F242A08009E8AD1 /* ProfileVC.swift */; };
+		4229489F1F251898007DBEAA /* QuotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4229489E1F251898007DBEAA /* QuotesVC.swift */; };
 		42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBA1F23D36000CF7184 /* Service.swift */; };
 		42BD1CBD1F23E82B00CF7184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBC1F23E82B00CF7184 /* Constants.swift */; };
 		42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBE1F23E8DB00CF7184 /* Router.swift */; };
@@ -27,6 +28,7 @@
 		0500333352B5838AF7F32E0E /* Pods-quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-quotes/Pods-quotes.release.xcconfig"; sourceTree = "<group>"; };
 		2F466A03869CC568B21CFA74 /* Pods-quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quotes/Pods-quotes.debug.xcconfig"; sourceTree = "<group>"; };
 		4208607D1F242A08009E8AD1 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		4229489E1F251898007DBEAA /* QuotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesVC.swift; sourceTree = "<group>"; };
 		42BD1CBA1F23D36000CF7184 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		42BD1CBC1F23E82B00CF7184 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42BD1CBE1F23E8DB00CF7184 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				42BD1CC81F23F80B00CF7184 /* AuthVC.swift */,
 				4208607D1F242A08009E8AD1 /* ProfileVC.swift */,
+				4229489E1F251898007DBEAA /* QuotesVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */,
+				4229489F1F251898007DBEAA /* QuotesVC.swift in Sources */,
 				42BD1CBB1F23D36000CF7184 /* Service.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
