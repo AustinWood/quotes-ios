@@ -30,7 +30,7 @@ struct QuotesService {
     
     static func getQuotes(said_by: Int?, heard_by: Int?, said_by_or_heard_by: Int?) {
         fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by,
-                    completion: { [] (result: Result<Quote>) in
+                    completion: { [] (result: Result<[Quote]>) in
                         
                         switch(result) {
                         case let .success(quote):
@@ -42,7 +42,7 @@ struct QuotesService {
     }
     
     static func fetchQuotes(said_by: Int?, heard_by: Int?, said_by_or_heard_by: Int?,
-                          completion: @escaping (Result<Quote>) -> Void) {
+                          completion: @escaping (Result<[Quote]>) -> Void) {
         
         Alamofire.request(
             Router.fetchQuotes(said_by: said_by, heard_by: heard_by, said_by_or_heard_by: said_by_or_heard_by)
@@ -51,12 +51,23 @@ struct QuotesService {
                 switch(response.result) {
                 case let .success(value):
                     let json = JSON(value:value)
-                    print(json)
-                    if let quote = Quote(json: json) {
-                        completion(Result.success(quote))
-                    } else{
-                        print("error parsing quote JSON")
+                    var quotes: [Quote] = []
+                    
+                    if let jsonQuotes = json.array {
+                        for jsonQuote in jsonQuotes {
+                            
+                            print("\n\n>>> YO!")
+                            print(jsonQuote)
+                            
+                            if let quote = Quote(json: jsonQuote) {
+                                quotes.append(quote)
+                            } else {
+                                print("error parsing quote JSON")
+                            }
+                        }
                     }
+                    
+                    completion(Result.success(quotes))
                 case let .failure(error):
                     print(error)
                 }

@@ -23,7 +23,7 @@
 ///////////////////////////////
 
 var SESSION_TOKEN: String?
-var USER_ID: Int?
+var USER_ID: Int? = 19
 
 import UIKit
 import Alamofire

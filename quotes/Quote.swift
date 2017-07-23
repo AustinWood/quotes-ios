@@ -24,14 +24,15 @@ class Quote: Failable {
         self.heardBy = heardBy
     }
     
-    required init?(json:JSON) {
+    required init?(json: JSON) {
         
         guard
             
-            let id = json[QuoteConstants.id].int,
-            let text = json[QuoteConstants.id].string,
-            let saidBy = json[QuoteConstants.saidBy].string,
-            let heardBy = json[QuoteConstants.heardBy].array
+            // TODO: Add these strings to QuoteConstants
+            let id = json["id"].int,
+            let text = json["text"].string,
+            let saidBy = json["speaker"]["name"].string,
+            let heardBy = json["hearers"].array
 
             else { return nil }
         
