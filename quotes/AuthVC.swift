@@ -9,7 +9,7 @@
 ///////////////////////////////
 // TODO
 //
-// uncomment logIn() in authButtonPressed
+// fix GLOBAL_SESSION_TOKEN
 //
 // number pad for phone number
 // validate and pretty-format phone number
@@ -20,6 +20,7 @@
 //
 ///////////////////////////////
 
+var GLOBAL_SESSION_TOKEN: String?
 
 import UIKit
 import Alamofire
@@ -102,6 +103,7 @@ class AuthVC: UIViewController {
     }
     
     func segueToProfile() {
+        GLOBAL_SESSION_TOKEN = user?.sessionToken
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
 }

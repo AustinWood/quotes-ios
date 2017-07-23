@@ -13,7 +13,7 @@ enum Router: URLRequestConvertible {
     
     case createUser(phone_number: String, name: String, password: String, image_url: URL?)
     case loginUser(phone_number: String, password: String)
-    case logoutUser(id: Int)
+    case logoutUser(session_token: String)
     
     var path: String {
         switch self {
@@ -26,6 +26,7 @@ enum Router: URLRequestConvertible {
         }
     }
     
+    // TODO: Is this even necessary?
     var body: Data {
         var bodyDict: [String: Any] = [:]
         
@@ -40,8 +41,8 @@ enum Router: URLRequestConvertible {
         case let .loginUser(phone_number: phone_number, password: password):
             bodyDict["phone_number"] = phone_number
             bodyDict["password"] = password
-        case let .logoutUser(id: id):
-            bodyDict["user_id"] = id
+        case let .logoutUser(session_token: session_token):
+            bodyDict["session_token"] = session_token
         }
         
         let data = try! JSONSerialization.data(withJSONObject: bodyDict, options: [])
@@ -50,26 +51,32 @@ enum Router: URLRequestConvertible {
     }
     
     var parameters: [String: Any] {
-        var userDict: [String: Any] = [:]
+        var paramDict: [String: Any] = [:]
+        
         
         switch self {
         case let .createUser(phone_number: phone_number, name: name, password: password, image_url: image_url):
+            var userDict: [String: Any] = [:]
             userDict["phone_number"] = phone_number
             userDict["name"] = name
             userDict["password"] = password
             if let image_url = image_url {
                 userDict["image_url"] =  image_url
             }
+            paramDict["user"] = userDict
         case let .loginUser(phone_number: phone_number, password: password):
+            var userDict: [String: Any] = [:]
             userDict["phone_number"] = phone_number
             userDict["password"] = password
-        case let .logoutUser(id: id):
-            userDict["id"] = id
+            paramDict["user"] = userDict
+        case let .logoutUser(session_token: session_token):
+            var sessionDict: [String: Any] = [:]
+            sessionDict["session_token"] = session_token
+            paramDict["session"] = sessionDict
         }
         
-        var paramDict: [String: Any] = [:]
-        paramDict["user"] = userDict
         return paramDict
+        
     }
     
     var method: HTTPMethod {

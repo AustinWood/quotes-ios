@@ -54,9 +54,9 @@ struct Service {
             })
     }
     
-    static func logoutUser(id: Int, completion: @escaping (Result<String>) -> Void) {
+    static func logoutUser(session_token: String, completion: @escaping (Result<String>) -> Void) {
         
-        Alamofire.request(Router.logoutUser(id: id))
+        Alamofire.request(Router.logoutUser(session_token: session_token))
             .responseJSON(completionHandler: { response in
                 
                 switch(response.result) {
