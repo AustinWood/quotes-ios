@@ -149,6 +149,7 @@
                     </view>
                     <connections>
                         <outlet property="authButton" destination="jyc-iy-LCf" id="NGl-Um-9Yh"/>
+                        <outlet property="nameStackView" destination="c3M-rZ-JqQ" id="xca-Sr-Cgc"/>
                         <outlet property="nameTextField" destination="aAv-ym-isl" id="oHp-cI-atC"/>
                         <outlet property="passwordTextField" destination="9M1-of-bRw" id="gvb-Fm-2rG"/>
                         <outlet property="phoneNumberTextField" destination="uvP-ov-IFf" id="yCX-7t-L96"/>

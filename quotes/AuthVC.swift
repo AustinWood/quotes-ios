@@ -31,26 +31,29 @@ class AuthVC: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var nameStackView: UIStackView!
+    
+    @IBOutlet weak var authButton: UIButton!
+    @IBOutlet weak var toggleAuthTypeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var authButton: UIButton!
-    
     @IBAction func authButtonPressed(_ sender: Any) {
         logIn()
     }
-    
-    @IBOutlet weak var toggleAuthTypeButton: UIButton!
     
     @IBAction func toggleAuthTypePressed(_ sender: Any) {
         newAccount = !newAccount
         if newAccount {
             authButton.setTitle("Sign up", for: .normal)
             toggleAuthTypeButton.setTitle("Log in instead", for: .normal)
+            nameStackView.isHidden = false
         } else {
             authButton.setTitle("Log in", for: .normal)
             toggleAuthTypeButton.setTitle("Sign up instead", for: .normal)
+            nameStackView.isHidden = true
         }
     }
     
