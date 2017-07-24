@@ -41,7 +41,7 @@ class ProfileVC: UIViewController {
     }
     
     func logOut() {
-        UsersService.logoutUser(session_token: SESSION_TOKEN!, completion: {
+        UsersService.logoutUser(session_token: (CURRENT_USER?.sessionToken)!, completion: {
             [weak self] (result: Result<Bool>) in
             switch(result) {
             case .success:

@@ -17,7 +17,6 @@
 //
 ///////////////////////////////
 
-var SESSION_TOKEN: String?
 var CURRENT_USER: User?
 
 import UIKit
@@ -125,7 +124,6 @@ class AuthVC: UIViewController {
     }
     
     func segueToProfile() {
-        SESSION_TOKEN = user?.sessionToken
         CURRENT_USER = user
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
