@@ -11,7 +11,7 @@ import UIKit
 class CustomSegue: UIStoryboardSegue {
     let duration: TimeInterval = 0.25
     let delay: TimeInterval = 0
-    let animationOptions: UIViewAnimationOptions = [.curveEaseOut] // [.CurveEaseInOut]
+    let animationOptions: UIViewAnimationOptions = [.curveEaseOut]
     
     override func perform() {
         let sourceView = source.view

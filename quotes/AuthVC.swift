@@ -10,20 +10,14 @@
 // TODO
 //
 // Hide auth switch statements by encapsulating methods in UsersService
-// fix SESSION_TOKEN
-// fix USER_ID
+// Put SESSION_TOKEN and CURRENT_USER in persistance layer instead of global vars
 //
-// number pad for phone number
 // validate and pretty-format phone number
-// hide password
-// move fields up when keyboard appears (scrollview?)
-// autocaps on name
 //
 //
 ///////////////////////////////
 
 var SESSION_TOKEN: String?
-var USER_ID: Int? = 19
 var CURRENT_USER: User?
 
 import UIKit
@@ -132,7 +126,6 @@ class AuthVC: UIViewController {
     
     func segueToProfile() {
         SESSION_TOKEN = user?.sessionToken
-        USER_ID = user?.id
         CURRENT_USER = user
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
