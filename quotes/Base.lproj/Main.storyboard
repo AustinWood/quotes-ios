@@ -235,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="-82.400000000000006" y="51.724137931034484"/>
         </scene>
-        <!--Add-->
+        <!--View Controller-->
         <scene sceneID="BiR-id-2b6">
             <objects>
                 <viewController id="A92-h3-2te" sceneMemberID="viewController">
@@ -266,14 +266,14 @@
                             <constraint firstItem="ZGW-5R-GVH" firstAttribute="centerY" secondItem="Wpg-zi-Nwo" secondAttribute="centerY" id="trZ-Rq-bht"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" id="3xD-kb-uB4"/>
+                    <tabBarItem key="tabBarItem" title="" image="quoteProcessIcon" selectedImage="quoteProcessIcon" id="3xD-kb-uB4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fJ-Eg-FIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="1019.640179910045"/>
         </scene>
-        <!--List-->
+        <!--QuotesVC-->
         <scene sceneID="sNL-dI-SZs">
             <objects>
                 <viewController id="MyS-js-Ub0" customClass="QuotesVC" customModule="quotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -404,7 +404,7 @@
                             <constraint firstItem="FoY-ct-8Bd" firstAttribute="centerX" secondItem="Rke-sO-lse" secondAttribute="centerX" id="ui1-f7-cFZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" id="CQ7-zZ-C09"/>
+                    <tabBarItem key="tabBarItem" title="" image="feedIcon" selectedImage="feedIcon" id="CQ7-zZ-C09"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="FoY-ct-8Bd" id="nZW-Ys-CbK"/>
@@ -415,7 +415,7 @@
             </objects>
             <point key="canvasLocation" x="228" y="1019.640179910045"/>
         </scene>
-        <!--Profile-->
+        <!--ProfileVC-->
         <scene sceneID="OJC-Zh-aYf">
             <objects>
                 <viewController id="JGJ-6e-sqt" customClass="ProfileVC" customModule="quotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -462,7 +462,7 @@
                             <constraint firstItem="JFa-EX-fQ3" firstAttribute="centerX" secondItem="f6K-Gk-pY2" secondAttribute="centerX" id="xVz-oN-Ncr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="QDw-LW-iz4"/>
+                    <tabBarItem key="tabBarItem" title="" image="ProfileIcon" selectedImage="ProfileIcon" id="QDw-LW-iz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profileImage" destination="f5H-MH-wiw" id="2QY-y2-quU"/>
@@ -477,7 +477,7 @@
         <scene sceneID="sm9-eu-BgC">
             <objects>
                 <tabBarController id="cGY-29-FK0" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="bIq-Qh-EXd">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bIq-Qh-EXd" customClass="CustomTabBar" customModule="quotes" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -494,7 +494,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ProfileIcon" width="35" height="35"/>
         <image name="captain_kirk" width="960" height="960"/>
+        <image name="feedIcon" width="36" height="28"/>
+        <image name="quoteProcessIcon" width="35" height="35"/>
         <image name="scotty" width="775" height="775"/>
         <image name="spock" width="660" height="660"/>
     </resources>

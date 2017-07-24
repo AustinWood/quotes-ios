@@ -25,6 +25,7 @@
 		42BD1CCB1F24028900CF7184 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42BD1CCA1F24028900CF7184 /* todo.txt */; };
 		42BE474D1F263838001C6B84 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE474C1F263838001C6B84 /* CircleImage.swift */; };
 		42BE47511F263B55001C6B84 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE47501F263B55001C6B84 /* QuoteCell.swift */; };
+		42BE47531F2649AD001C6B84 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE47521F2649AD001C6B84 /* CustomTabBar.swift */; };
 		42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634C1F23C674009F2FE6 /* AppDelegate.swift */; };
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
 		42C663541F23C674009F2FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C663531F23C674009F2FE6 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		42BD1CCA1F24028900CF7184 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		42BE474C1F263838001C6B84 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		42BE47501F263B55001C6B84 /* QuoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
+		42BE47521F2649AD001C6B84 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		42C663491F23C674009F2FE6 /* quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C6634C1F23C674009F2FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C663511F23C674009F2FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				42BE474C1F263838001C6B84 /* CircleImage.swift */,
 				42DE87851F2594D800EF11E8 /* Segue.swift */,
 				4286403D1F257B0A003A642D /* Buttons */,
+				42BE47521F2649AD001C6B84 /* CustomTabBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				422948A11F2540E5007DBEAA /* QuotesService.swift in Sources */,
 				42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */,
+				42BE47531F2649AD001C6B84 /* CustomTabBar.swift in Sources */,
 				4229489F1F251898007DBEAA /* QuotesVC.swift in Sources */,
 				42BD1CBB1F23D36000CF7184 /* UsersService.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,

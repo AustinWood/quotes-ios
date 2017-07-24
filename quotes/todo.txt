@@ -4,18 +4,11 @@ jaredmorgenstern.com/quotes
 ### General
 
 tab bar images
-fix QuotesService callbacks
 distinguish between User and CurrentUser
-
-#####################
-### List tab
-
-table view for quotes said_by_or_heard_by
 
 #####################
 ### Profile tab
 
-dynamic picture
 dynamic name label
 table view for quotes
 "Said by" / "Heard by" buttons
