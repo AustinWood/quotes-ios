@@ -22,6 +22,8 @@ class QuotesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var quotes: [Quote] = []
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getQuotes()
@@ -29,8 +31,11 @@ class QuotesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func getQuotes() {
+        activityIndicator.startAnimating()
         QuotesService.fetchQuotes(said_by: nil, heard_by: nil, said_by_or_heard_by: CURRENT_USER?.id,
                     completion: { [] (result: Result<[Quote]>) in
+                        
+                        self.activityIndicator.stopAnimating()
                         
                         switch(result) {
                         case let .success(fetchedQuotes):

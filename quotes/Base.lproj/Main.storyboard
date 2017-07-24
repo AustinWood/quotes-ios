@@ -389,18 +389,25 @@
                                     <outlet property="delegate" destination="MyS-js-Ub0" id="IJM-0k-B8L"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-ct-8Bd">
+                                <rect key="frame" x="169.5" y="315" width="37" height="37"/>
+                                <color key="color" red="0.31523802876472473" green="0.66536933183670044" blue="0.94381862878799438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="I20-hk-cXl" firstAttribute="top" secondItem="cYS-WP-3Zr" secondAttribute="bottom" id="Hfc-DW-JEv"/>
                             <constraint firstItem="cYS-WP-3Zr" firstAttribute="top" secondItem="Y3R-Ur-LRk" secondAttribute="bottom" id="In9-AA-bb7"/>
+                            <constraint firstItem="FoY-ct-8Bd" firstAttribute="centerY" secondItem="Rke-sO-lse" secondAttribute="centerY" id="SxU-B1-fVk"/>
                             <constraint firstAttribute="trailing" secondItem="cYS-WP-3Zr" secondAttribute="trailing" id="bJO-rp-xcU"/>
                             <constraint firstItem="cYS-WP-3Zr" firstAttribute="leading" secondItem="Rke-sO-lse" secondAttribute="leading" id="bSH-Lc-YIF"/>
+                            <constraint firstItem="FoY-ct-8Bd" firstAttribute="centerX" secondItem="Rke-sO-lse" secondAttribute="centerX" id="ui1-f7-cFZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" id="CQ7-zZ-C09"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="FoY-ct-8Bd" id="nZW-Ys-CbK"/>
                         <outlet property="tableView" destination="cYS-WP-3Zr" id="1PX-GB-Dz2"/>
                     </connections>
                 </viewController>
