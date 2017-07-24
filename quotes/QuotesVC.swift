@@ -25,6 +25,7 @@ class QuotesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getQuotes()
+        configureTableView()
     }
     
     func getQuotes() {
@@ -45,6 +46,11 @@ class QuotesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Table view
     
     @IBOutlet weak var tableView: UITableView!
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! QuoteCell
