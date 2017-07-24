@@ -23,6 +23,8 @@
 		42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC51F23EFFF00CF7184 /* Protocols.swift */; };
 		42BD1CC91F23F80B00CF7184 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CC81F23F80B00CF7184 /* AuthVC.swift */; };
 		42BD1CCB1F24028900CF7184 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42BD1CCA1F24028900CF7184 /* todo.txt */; };
+		42BE474D1F263838001C6B84 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE474C1F263838001C6B84 /* CircleImage.swift */; };
+		42BE47511F263B55001C6B84 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE47501F263B55001C6B84 /* QuoteCell.swift */; };
 		42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6634C1F23C674009F2FE6 /* AppDelegate.swift */; };
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
 		42C663541F23C674009F2FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C663531F23C674009F2FE6 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		42BD1CC51F23EFFF00CF7184 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = ../Protocols.swift; sourceTree = "<group>"; };
 		42BD1CC81F23F80B00CF7184 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		42BD1CCA1F24028900CF7184 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		42BE474C1F263838001C6B84 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		42BE47501F263B55001C6B84 /* QuoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		42C663491F23C674009F2FE6 /* quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C6634C1F23C674009F2FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C663511F23C674009F2FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 		428640361F257469003A642D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42BE47501F263B55001C6B84 /* QuoteCell.swift */,
 				4286403E1F257DE8003A642D /* RoundedView.swift */,
+				42BE474C1F263838001C6B84 /* CircleImage.swift */,
 				42DE87851F2594D800EF11E8 /* Segue.swift */,
 				4286403D1F257B0A003A642D /* Buttons */,
 			);
@@ -313,6 +319,8 @@
 				4286403C1F257B01003A642D /* CircleButton.swift in Sources */,
 				4286403F1F257DE8003A642D /* RoundedView.swift in Sources */,
 				4286403A1F257777003A642D /* UIButton.swift in Sources */,
+				42BE474D1F263838001C6B84 /* CircleImage.swift in Sources */,
+				42BE47511F263B55001C6B84 /* QuoteCell.swift in Sources */,
 				428640381F25748C003A642D /* RoundedButton.swift in Sources */,
 				42BD1CC41F23EF8300CF7184 /* User.swift in Sources */,
 				42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */,

@@ -6,11 +6,20 @@
 //  Copyright © 2017 Austin Wood. All rights reserved.
 //
 
+///////////////////////////////
+// TODO
+//
+// tableViewBeginUpdates/endUpdates for smooth reloading
+//
+///////////////////////////////
+
 import UIKit
 import Alamofire
 import SwiftyJSON
 
-class QuotesVC: UIViewController {
+class QuotesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var quotes: [Quote] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +32,27 @@ class QuotesVC: UIViewController {
                         
                         switch(result) {
                         case let .success(fetchedQuotes):
-                            print(fetchedQuotes)
+                            self.quotes = fetchedQuotes
+                            self.tableView.reloadData()
                         case let .failure(error):
                             print(error.localizedDescription)
                         }
         })
+    }
+    
+    //////////////////////////////////////////////
+    // MARK: - Table view
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! QuoteCell
+        cell.configureCell(quote: quotes[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quotes.count
     }
     
 }
