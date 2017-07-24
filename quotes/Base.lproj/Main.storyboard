@@ -245,14 +245,32 @@
                     <view key="view" contentMode="scaleToFill" id="Wpg-zi-Nwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adding quotes through the app is not yet supported." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-5R-GVH">
+                                <rect key="frame" x="30" y="263.5" width="315" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="r58-OT-U8n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZGW-5R-GVH" secondAttribute="trailing" constant="30" id="ETl-TE-3lO"/>
+                            <constraint firstItem="ZGW-5R-GVH" firstAttribute="leading" secondItem="Wpg-zi-Nwo" secondAttribute="leading" constant="30" id="Vci-Gz-Dq3"/>
+                            <constraint firstItem="ZGW-5R-GVH" firstAttribute="centerX" secondItem="Wpg-zi-Nwo" secondAttribute="centerX" id="WqV-e5-IcQ"/>
+                            <constraint firstItem="ZGW-5R-GVH" firstAttribute="centerY" secondItem="Wpg-zi-Nwo" secondAttribute="centerY" id="bnL-hd-lqK"/>
+                            <constraint firstItem="ZGW-5R-GVH" firstAttribute="centerY" secondItem="Wpg-zi-Nwo" secondAttribute="centerY" id="trZ-Rq-bht"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" id="3xD-kb-uB4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fJ-Eg-FIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="1020"/>
+            <point key="canvasLocation" x="1029.5999999999999" y="1019.640179910045"/>
         </scene>
         <!--List-->
         <scene sceneID="sNL-dI-SZs">
@@ -265,7 +283,19 @@
                     <view key="view" contentMode="scaleToFill" id="Rke-sO-lse">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This screen coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nf-y4-Hz8">
+                                <rect key="frame" x="55.5" y="320.5" width="264" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5nf-y4-Hz8" firstAttribute="centerX" secondItem="Rke-sO-lse" secondAttribute="centerX" id="jpm-5O-jRc"/>
+                            <constraint firstItem="5nf-y4-Hz8" firstAttribute="centerY" secondItem="Rke-sO-lse" secondAttribute="centerY" id="yYs-xp-5pN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" id="CQ7-zZ-C09"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -286,27 +316,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
-                                <rect key="frame" x="76" y="310" width="223" height="46"/>
-                                <color key="backgroundColor" red="1" green="0.24626806379999999" blue="0.32597264650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="BnD-mN-lRI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Log out">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0J-RW-v5l"/>
-                                    <action selector="logOutPressed:" destination="JGJ-6e-sqt" eventType="touchUpInside" id="dCp-DN-dZc"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFa-EX-fQ3">
+                                <rect key="frame" x="87.5" y="200.5" width="200" height="266"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVc-a0-mib" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="c3Z-JN-u3j"/>
+                                            <constraint firstAttribute="height" constant="200" id="gLq-9t-cmO"/>
+                                        </constraints>
+                                        <state key="normal" image="spock"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="220" width="180" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.24626806379999999" blue="0.32597264650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="945-pw-oQW"/>
+                                            <constraint firstAttribute="height" constant="46" id="BnD-mN-lRI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Log out">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0J-RW-v5l"/>
+                                            <action selector="logOutPressed:" destination="JGJ-6e-sqt" eventType="touchUpInside" id="dCp-DN-dZc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HCI-vW-KrU" firstAttribute="centerY" secondItem="f6K-Gk-pY2" secondAttribute="centerY" id="ayV-No-1RO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HCI-vW-KrU" secondAttribute="trailing" constant="60" id="ss7-VE-oYi"/>
-                            <constraint firstItem="HCI-vW-KrU" firstAttribute="leading" secondItem="f6K-Gk-pY2" secondAttribute="leadingMargin" constant="60" id="tBy-Ai-t8A"/>
+                            <constraint firstItem="JFa-EX-fQ3" firstAttribute="centerY" secondItem="f6K-Gk-pY2" secondAttribute="centerY" id="FFj-EX-WAN"/>
+                            <constraint firstItem="JFa-EX-fQ3" firstAttribute="centerX" secondItem="f6K-Gk-pY2" secondAttribute="centerX" id="xVz-oN-Ncr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="QDw-LW-iz4"/>
@@ -317,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGg-k9-0iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="1020"/>
+            <point key="canvasLocation" x="1840.8" y="1019.640179910045"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sm9-eu-BgC">
