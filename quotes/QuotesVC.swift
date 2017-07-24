@@ -10,6 +10,7 @@
 // TODO
 //
 // tableViewBeginUpdates/endUpdates for smooth reloading
+// loading spinner
 //
 ///////////////////////////////
 

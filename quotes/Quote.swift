@@ -15,9 +15,9 @@ class Quote: Failable {
     var id: Int
     var text: String
     var saidBy: String
-    var heardBy: [Any]
+    var heardBy: [String]
     
-    init(id: Int, text: String, saidBy: String, heardBy: [Any]) {
+    init(id: Int, text: String, saidBy: String, heardBy: [String]) {
         self.id = id
         self.text = text
         self.saidBy = saidBy
@@ -39,6 +39,6 @@ class Quote: Failable {
         self.id = id
         self.text = text
         self.saidBy = saidBy
-        self.heardBy = heardBy
+        self.heardBy = heardBy.map { $0.stringValue}
     }
 }
