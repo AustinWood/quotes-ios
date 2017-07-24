@@ -12,6 +12,7 @@
 		422948A11F2540E5007DBEAA /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422948A01F2540E5007DBEAA /* QuotesService.swift */; };
 		422948A31F254328007DBEAA /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422948A21F254328007DBEAA /* Quote.swift */; };
 		428640381F25748C003A642D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428640371F25748C003A642D /* RoundedButton.swift */; };
+		4286403A1F257777003A642D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428640391F257777003A642D /* UIButton.swift */; };
 		42BD1CBB1F23D36000CF7184 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBA1F23D36000CF7184 /* UsersService.swift */; };
 		42BD1CBD1F23E82B00CF7184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBC1F23E82B00CF7184 /* Constants.swift */; };
 		42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD1CBE1F23E8DB00CF7184 /* Router.swift */; };
@@ -35,6 +36,7 @@
 		422948A01F2540E5007DBEAA /* QuotesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesService.swift; sourceTree = "<group>"; };
 		422948A21F254328007DBEAA /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		428640371F25748C003A642D /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		428640391F257777003A642D /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		42BD1CBA1F23D36000CF7184 /* UsersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		42BD1CBC1F23E82B00CF7184 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42BD1CBE1F23E8DB00CF7184 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				428640371F25748C003A642D /* RoundedButton.swift */,
+				428640391F257777003A642D /* UIButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
 				4208607E1F242A08009E8AD1 /* ProfileVC.swift in Sources */,
+				4286403A1F257777003A642D /* UIButton.swift in Sources */,
 				428640381F25748C003A642D /* RoundedButton.swift in Sources */,
 				42BD1CC41F23EF8300CF7184 /* User.swift in Sources */,
 				42C6634D1F23C674009F2FE6 /* AppDelegate.swift in Sources */,

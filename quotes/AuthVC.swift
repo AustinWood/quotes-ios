@@ -43,8 +43,22 @@ class AuthVC: UIViewController {
     @IBOutlet weak var authButton: UIButton!
     @IBOutlet weak var toggleAuthTypeButton: UIButton!
     
+    //////////////////////////////////////////////
+    // MARK: - Initialization
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTextFields()
+        setupDismissKeyboard()
+    }
+    
+    func configureTextFields() {
+        phoneNumberTextField.keyboardType = .phonePad
+        nameTextField.autocapitalizationType = .words
+        passwordTextField.isSecureTextEntry = true
+    }
+    
+    func setupDismissKeyboard() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(AuthVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -52,6 +66,9 @@ class AuthVC: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    //////////////////////////////////////////////
+    // MARK: - Button actions
     
     @IBAction func authButtonPressed(_ sender: Any) {
         newAccount ? signUp() : logIn()
@@ -117,15 +134,5 @@ class AuthVC: UIViewController {
         USER_ID = user?.id
         CURRENT_USER = user
         self.performSegue(withIdentifier: "goToProfile", sender: self)
-    }
-}
-
-
-extension UIButton {
-    func setTitleWithoutAnimation(_ title: String?) {
-        UIView.setAnimationsEnabled(false)
-        setTitle(title, for: .normal)
-        layoutIfNeeded()
-        UIView.setAnimationsEnabled(true)
     }
 }
