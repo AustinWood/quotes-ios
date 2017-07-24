@@ -24,6 +24,7 @@
 
 var SESSION_TOKEN: String?
 var USER_ID: Int? = 19
+var CURRENT_USER: User?
 
 import UIKit
 import Alamofire
@@ -114,6 +115,7 @@ class AuthVC: UIViewController {
     func segueToProfile() {
         SESSION_TOKEN = user?.sessionToken
         USER_ID = user?.id
+        CURRENT_USER = user
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
 }

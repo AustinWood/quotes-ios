@@ -23,10 +23,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
-                                <rect key="frame" x="56" y="80" width="263" height="367"/>
+                                <rect key="frame" x="56" y="80" width="263" height="429.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-KW-Mlo">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-Oc-USi">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="219"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="263" height="219"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZGH-k6-XCn">
                                                 <rect key="frame" x="0.0" y="0.0" width="263" height="57"/>
@@ -107,8 +113,8 @@
                                             <constraint firstAttribute="trailing" secondItem="ZGH-k6-XCn" secondAttribute="trailing" id="eOv-sC-Zfd"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-iy-LCf">
-                                        <rect key="frame" x="0.0" y="255" width="263" height="46"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-iy-LCf" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="317.5" width="263" height="46"/>
                                         <color key="backgroundColor" red="1" green="0.24626806378364563" blue="0.32597264647483826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="liV-20-wZA"/>
@@ -122,7 +128,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-if-Lac">
-                                        <rect key="frame" x="0.0" y="337" width="263" height="30"/>
+                                        <rect key="frame" x="0.0" y="399.5" width="263" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Log in instead">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -215,7 +221,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
                                 <rect key="frame" x="76" y="310" width="223" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.24626806379999999" blue="0.32597264650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
