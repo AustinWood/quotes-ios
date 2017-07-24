@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
-                                <rect key="frame" x="56" y="80" width="263" height="429.5"/>
+                                <rect key="frame" x="56" y="68" width="263" height="429.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Quotes&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-KW-Mlo">
                                         <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
@@ -147,19 +147,19 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-Lh-nbl">
-                                <rect key="frame" x="0.0" y="507" width="375" height="160"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-n0-oHh">
-                                        <rect key="frame" x="30" y="26" width="315" height="108"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-n0-oHh">
+                                        <rect key="frame" x="30" y="43" width="315" height="114.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto log in with demo account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-JL-3Oc">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto-login with demo account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-JL-3Oc">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-s6-Aa4">
-                                                <rect key="frame" x="0.0" y="33" width="315" height="75"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="315" height="75"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4C-WL-76T" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -202,7 +202,7 @@
                                 <color key="backgroundColor" red="0.31411689519882202" green="0.6681857705116272" blue="0.9454997181892395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nlT-n0-oHh" firstAttribute="leading" secondItem="wvQ-Lh-nbl" secondAttribute="leading" constant="30" id="etV-qD-iKm"/>
-                                    <constraint firstAttribute="height" constant="160" id="hNb-Xc-KSW"/>
+                                    <constraint firstAttribute="height" constant="200" id="hNb-Xc-KSW"/>
                                     <constraint firstItem="nlT-n0-oHh" firstAttribute="centerY" secondItem="wvQ-Lh-nbl" secondAttribute="centerY" id="oAj-cU-0bU"/>
                                     <constraint firstAttribute="trailing" secondItem="nlT-n0-oHh" secondAttribute="trailing" constant="30" id="qE8-pD-kmD"/>
                                 </constraints>
@@ -214,12 +214,10 @@
                             <constraint firstAttribute="trailing" secondItem="wvQ-Lh-nbl" secondAttribute="trailing" id="bZg-PB-Ivd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cAu-JB-clv" secondAttribute="trailing" constant="40" id="dD1-Vu-Yco"/>
                             <constraint firstItem="wvQ-Lh-nbl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jJt-hf-932"/>
-                            <constraint firstItem="cAu-JB-clv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="q7N-wW-21e"/>
+                            <constraint firstItem="cAu-JB-clv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="q7N-wW-21e"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wvQ-Lh-nbl" secondAttribute="bottom" id="uWK-8B-V8e"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="authButton" destination="jyc-iy-LCf" id="NGl-Um-9Yh"/>
                         <outlet property="nameStackView" destination="c3M-rZ-JqQ" id="xca-Sr-Cgc"/>
@@ -227,7 +225,7 @@
                         <outlet property="passwordTextField" destination="9M1-of-bRw" id="gvb-Fm-2rG"/>
                         <outlet property="phoneNumberTextField" destination="uvP-ov-IFf" id="yCX-7t-L96"/>
                         <outlet property="toggleAuthTypeButton" destination="A3K-if-Lac" id="FZb-ZI-qvE"/>
-                        <segue destination="cGY-29-FK0" kind="showDetail" identifier="goToProfile" id="mz3-2R-VOm"/>
+                        <segue destination="cGY-29-FK0" kind="custom" identifier="goToProfile" customClass="CustomSegue" customModule="quotes" customModuleProvider="target" id="mz3-2R-VOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -355,7 +353,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="QDw-LW-iz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goToAuth" id="09P-BI-eJH"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goToAuth" customClass="CustomSegue" customModule="quotes" customModuleProvider="target" id="09P-BI-eJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGg-k9-0iz" userLabel="First Responder" sceneMemberID="firstResponder"/>

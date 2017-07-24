@@ -27,6 +27,7 @@
 		42C663521F23C674009F2FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663501F23C674009F2FE6 /* Main.storyboard */; };
 		42C663541F23C674009F2FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C663531F23C674009F2FE6 /* Assets.xcassets */; };
 		42C663571F23C674009F2FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C663551F23C674009F2FE6 /* LaunchScreen.storyboard */; };
+		42DE87861F2594D800EF11E8 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE87851F2594D800EF11E8 /* Segue.swift */; };
 		45345AB2B028DAA4A404C4F7 /* Pods_quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43940ACF12789E86E9485644 /* Pods_quotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		42C663531F23C674009F2FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C663561F23C674009F2FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42C663581F23C674009F2FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42DE87851F2594D800EF11E8 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		43940ACF12789E86E9485644 /* Pods_quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4286403E1F257DE8003A642D /* RoundedView.swift */,
+				42DE87851F2594D800EF11E8 /* Segue.swift */,
 				4286403D1F257B0A003A642D /* Buttons */,
 			);
 			name = Views;
@@ -305,6 +308,7 @@
 				42BD1CBB1F23D36000CF7184 /* UsersService.swift in Sources */,
 				42BD1CBF1F23E8DB00CF7184 /* Router.swift in Sources */,
 				42BD1CC61F23EFFF00CF7184 /* Protocols.swift in Sources */,
+				42DE87861F2594D800EF11E8 /* Segue.swift in Sources */,
 				4208607E1F242A08009E8AD1 /* ProfileVC.swift in Sources */,
 				4286403C1F257B01003A642D /* CircleButton.swift in Sources */,
 				4286403F1F257DE8003A642D /* RoundedView.swift in Sources */,
