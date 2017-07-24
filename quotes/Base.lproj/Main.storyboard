@@ -23,17 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
-                                <rect key="frame" x="56" y="68" width="263" height="429.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
+                                <rect key="frame" x="56" y="68" width="263" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Quotes&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-KW-Mlo">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-Oc-USi">
-                                        <rect key="frame" x="0.0" y="62.5" width="263" height="219"/>
+                                        <rect key="frame" x="0.0" y="61" width="263" height="219"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZGH-k6-XCn">
                                                 <rect key="frame" x="0.0" y="0.0" width="263" height="57"/>
@@ -114,43 +114,46 @@
                                             <constraint firstAttribute="trailing" secondItem="ZGH-k6-XCn" secondAttribute="trailing" id="eOv-sC-Zfd"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-iy-LCf" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="317.5" width="263" height="46"/>
-                                        <color key="backgroundColor" red="1" green="0.24626806378364563" blue="0.32597264647483826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="liV-20-wZA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agY-48-qgn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-if-Lac">
-                                        <rect key="frame" x="0.0" y="399.5" width="263" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Log in instead">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toggleAuthTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgI-Yb-zlI"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-KO-XL7">
+                                        <rect key="frame" x="0.0" y="310" width="263" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-iy-LCf" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="46"/>
+                                                <color key="backgroundColor" red="1" green="0.24626806378364563" blue="0.32597264647483826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="liV-20-wZA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="authButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agY-48-qgn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-if-Lac">
+                                                <rect key="frame" x="0.0" y="66" width="263" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Log in instead">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleAuthTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgI-Yb-zlI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6yD-Oc-USi" firstAttribute="leading" secondItem="cAu-JB-clv" secondAttribute="leading" id="G9S-ln-wxH"/>
-                                    <constraint firstAttribute="trailing" secondItem="jyc-iy-LCf" secondAttribute="trailing" id="HYX-sQ-OsF"/>
-                                    <constraint firstItem="jyc-iy-LCf" firstAttribute="leading" secondItem="cAu-JB-clv" secondAttribute="leading" id="Lfb-eb-KRn"/>
                                     <constraint firstAttribute="trailing" secondItem="6yD-Oc-USi" secondAttribute="trailing" id="hf1-jm-vPF"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-Lh-nbl">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="457" width="375" height="210"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-n0-oHh">
-                                        <rect key="frame" x="30" y="43" width="315" height="114.5"/>
+                                        <rect key="frame" x="30" y="40.5" width="315" height="129.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto-login with demo account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-JL-3Oc">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="21.5"/>
@@ -159,10 +162,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-s6-Aa4">
-                                                <rect key="frame" x="0.0" y="39.5" width="315" height="75"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="315" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4C-WL-76T" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="k4C-WL-76T" secondAttribute="height" multiplier="1:1" id="rP1-pw-DeZ"/>
                                                         </constraints>
@@ -172,7 +175,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUx-aO-n5C" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
-                                                        <rect key="frame" x="120" y="0.0" width="75" height="75"/>
+                                                        <rect key="frame" x="112.5" y="0.0" width="90" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="lUx-aO-n5C" secondAttribute="height" multiplier="1:1" id="wc7-1G-myr"/>
                                                         </constraints>
@@ -182,7 +185,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn1-1C-ykS" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
-                                                        <rect key="frame" x="240" y="0.0" width="75" height="75"/>
+                                                        <rect key="frame" x="225" y="0.0" width="90" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kn1-1C-ykS" secondAttribute="height" multiplier="1:1" id="sTr-Wx-5XU"/>
                                                         </constraints>
@@ -193,7 +196,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="seL-k7-Ve5"/>
+                                                    <constraint firstAttribute="height" constant="90" id="seL-k7-Ve5"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -202,7 +205,7 @@
                                 <color key="backgroundColor" red="0.31411689519882202" green="0.6681857705116272" blue="0.9454997181892395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nlT-n0-oHh" firstAttribute="leading" secondItem="wvQ-Lh-nbl" secondAttribute="leading" constant="30" id="etV-qD-iKm"/>
-                                    <constraint firstAttribute="height" constant="200" id="hNb-Xc-KSW"/>
+                                    <constraint firstAttribute="height" constant="210" id="hNb-Xc-KSW"/>
                                     <constraint firstItem="nlT-n0-oHh" firstAttribute="centerY" secondItem="wvQ-Lh-nbl" secondAttribute="centerY" id="oAj-cU-0bU"/>
                                     <constraint firstAttribute="trailing" secondItem="nlT-n0-oHh" secondAttribute="trailing" constant="30" id="qE8-pD-kmD"/>
                                 </constraints>

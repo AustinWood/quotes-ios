@@ -71,6 +71,7 @@ class AuthVC: UIViewController {
     // MARK: - Button actions
     
     @IBAction func authButtonPressed(_ sender: Any) {
+        dismissKeyboard()
         newAccount ? signUp() : logIn()
     }
     
