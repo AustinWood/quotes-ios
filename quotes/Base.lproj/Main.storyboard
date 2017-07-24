@@ -423,14 +423,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFa-EX-fQ3">
                                 <rect key="frame" x="87.5" y="200.5" width="200" height="266"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVc-a0-mib" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spock" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-MH-wiw" customClass="CircleImage" customModule="quotes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="c3Z-JN-u3j"/>
-                                            <constraint firstAttribute="height" constant="200" id="gLq-9t-cmO"/>
+                                            <constraint firstAttribute="height" constant="200" id="9RB-mG-CgM"/>
+                                            <constraint firstAttribute="width" constant="200" id="p28-5O-Pqr"/>
                                         </constraints>
-                                        <state key="normal" image="spock"/>
-                                    </button>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCI-vW-KrU" customClass="RoundedButton" customModule="quotes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="220" width="200" height="46"/>
                                         <color key="backgroundColor" red="1" green="0.24626806379999999" blue="0.32597264650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -459,6 +458,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="QDw-LW-iz4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="profileImage" destination="f5H-MH-wiw" id="2QY-y2-quU"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goToAuth" customClass="CustomSegue" customModule="quotes" customModuleProvider="target" id="09P-BI-eJH"/>
                     </connections>
                 </viewController>

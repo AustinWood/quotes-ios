@@ -10,9 +10,30 @@ import UIKit
 import Alamofire
 
 class ProfileVC: UIViewController {
+    
+    let userImages: [String: UIImage] = [
+        "Captain Kirk": #imageLiteral(resourceName: "captain_kirk"),
+        "Dr. McCoy": #imageLiteral(resourceName: "dr_mccoy"),
+        "Scotty": #imageLiteral(resourceName: "scotty"),
+        "Spock": #imageLiteral(resourceName: "spock"),
+        "Uhura": #imageLiteral(resourceName: "uhura")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setProfileImage()
+    }
+    
+    @IBOutlet weak var profileImage: CircleImage!
+    
+    func setProfileImage() {
+        if let userImage = userImages[(CURRENT_USER?.name)!] {
+            print("set image!")
+            profileImage.image = userImage
+        } else {
+            print("name not found")
+            profileImage.image = UIImage.init(named: "new_user")
+        }
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
