@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +26,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-JB-clv">
                                 <rect key="frame" x="56" y="80" width="263" height="429.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-KW-Mlo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Quotes&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-KW-Mlo">
                                         <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -145,12 +146,76 @@
                                     <constraint firstAttribute="trailing" secondItem="6yD-Oc-USi" secondAttribute="trailing" id="hf1-jm-vPF"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-Lh-nbl">
+                                <rect key="frame" x="0.0" y="507" width="375" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-n0-oHh">
+                                        <rect key="frame" x="30" y="26" width="315" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto log in with demo account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-JL-3Oc">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-s6-Aa4">
+                                                <rect key="frame" x="0.0" y="33" width="315" height="75"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4C-WL-76T" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="k4C-WL-76T" secondAttribute="height" multiplier="1:1" id="rP1-pw-DeZ"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="captain_kirk"/>
+                                                        <connections>
+                                                            <action selector="captainKirkPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IY5-dI-J6F"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUx-aO-n5C" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
+                                                        <rect key="frame" x="120" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="lUx-aO-n5C" secondAttribute="height" multiplier="1:1" id="wc7-1G-myr"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="spock"/>
+                                                        <connections>
+                                                            <action selector="spockPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kro-DF-hDw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn1-1C-ykS" customClass="CircleButton" customModule="quotes" customModuleProvider="target">
+                                                        <rect key="frame" x="240" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Kn1-1C-ykS" secondAttribute="height" multiplier="1:1" id="sTr-Wx-5XU"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="scotty"/>
+                                                        <connections>
+                                                            <action selector="scottyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zId-Bb-SEF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="seL-k7-Ve5"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31411689519882202" green="0.6681857705116272" blue="0.9454997181892395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nlT-n0-oHh" firstAttribute="leading" secondItem="wvQ-Lh-nbl" secondAttribute="leading" constant="30" id="etV-qD-iKm"/>
+                                    <constraint firstAttribute="height" constant="160" id="hNb-Xc-KSW"/>
+                                    <constraint firstItem="nlT-n0-oHh" firstAttribute="centerY" secondItem="wvQ-Lh-nbl" secondAttribute="centerY" id="oAj-cU-0bU"/>
+                                    <constraint firstAttribute="trailing" secondItem="nlT-n0-oHh" secondAttribute="trailing" constant="30" id="qE8-pD-kmD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cAu-JB-clv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="V1F-eB-W3Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cAu-JB-clv" secondAttribute="trailing" constant="40" id="ap7-2f-se4"/>
-                            <constraint firstItem="cAu-JB-clv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="fq5-4h-ble"/>
+                            <constraint firstItem="cAu-JB-clv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="0Ep-S4-qCz"/>
+                            <constraint firstAttribute="trailing" secondItem="wvQ-Lh-nbl" secondAttribute="trailing" id="bZg-PB-Ivd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAu-JB-clv" secondAttribute="trailing" constant="40" id="dD1-Vu-Yco"/>
+                            <constraint firstItem="wvQ-Lh-nbl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jJt-hf-932"/>
+                            <constraint firstItem="cAu-JB-clv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="q7N-wW-21e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wvQ-Lh-nbl" secondAttribute="bottom" id="uWK-8B-V8e"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -274,4 +339,9 @@
             <point key="canvasLocation" x="1039" y="52"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="captain_kirk" width="960" height="960"/>
+        <image name="scotty" width="775" height="775"/>
+        <image name="spock" width="660" height="660"/>
+    </resources>
 </document>

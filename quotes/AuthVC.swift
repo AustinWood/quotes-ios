@@ -135,4 +135,35 @@ class AuthVC: UIViewController {
         CURRENT_USER = user
         self.performSegue(withIdentifier: "goToProfile", sender: self)
     }
+    
+    //////////////////////////////////////////////
+    // MARK: - Demo
+    
+    @IBAction func captainKirkPressed(_ sender: Any) {
+        loginDemoUser(phoneNumber: "7175888802", password: "password")
+    }
+    
+    @IBAction func spockPressed(_ sender: Any) {
+        loginDemoUser(phoneNumber: "7175888801", password: "password")
+    }
+    
+    @IBAction func scottyPressed(_ sender: Any) {
+        loginDemoUser(phoneNumber: "7175888805", password: "password")
+    }
+    
+    func loginDemoUser(phoneNumber: String, password: String) {
+        // TODO: DRY, login()
+        UsersService.loginUser(phone_number: phoneNumber, password: password,
+                               completion: { [weak self] (result: Result<User>) in
+                                
+                                switch(result) {
+                                case let .success(user):
+                                    self?.user = user
+                                    self?.segueToProfile()
+                                case let .failure(error):
+                                    print(error.localizedDescription)
+                                }
+        })
+    }
+    
 }
